@@ -14,7 +14,8 @@ Your Doofy landing page is ready for deployment! Here's how to get it live with 
 ### Step 2: Update API Configuration
 Replace the placeholder values in these files:
 
-**`api/emails.js`** (line 2-3):
+**`api/emails.js`** (line 2-3)
+:
 ```javascript
 const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/YOUR_BIN_ID_HERE';
 const JSONBIN_KEY = 'YOUR_API_KEY_HERE';
