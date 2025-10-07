@@ -1,0 +1,13 @@
+# Create a file called .env.local in your project root with these contents:
+
+VITE_SUPABASE_URL=https://rndiktnoopmxcwdulspf.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJuZGlrdG5vb3BteGN3ZHVsc3BmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4MTc5NjMsImV4cCI6MjA3NTM5Mzk2M30.khywq7SrgW3YFlnEvk-nI4jeXAEJDm6u79-9fNLPNxQ
+SUPABASE_URL=https://rndiktnoopmxcwdulspf.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJuZGlrdG5vb3BteGN3ZHVsc3BmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTgxNzk2MywiZXhwIjoyMDc1MzkzOTYzfQ.X4dQiPPrmsQAMW43aXScBqAScWtGxk9p7nNBRPEsBU0
+
+# Instructions:
+# 1. Copy the above content
+# 2. Create a new file called .env.local in your project root
+# 3. Paste the content
+# 4. Save the file
+# 5. Restart your development server (npm run dev)
