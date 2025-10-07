@@ -33,7 +33,7 @@ const Index = () => {
       <div id="features">
         <FeatureBlock
           title="AI that understands context."
-          description="Doofy uses advanced AI to resolve tickets faster and more accurately than zendesk, making every interaction seamless."
+          description="dooza uses advanced AI to resolve tickets faster and more accurately than zendesk, making every interaction seamless."
           imageUrl={aiContextImg}
           reverse={false}
         />

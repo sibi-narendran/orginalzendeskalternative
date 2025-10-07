@@ -54,7 +54,7 @@ const Signup = () => {
         <div className="w-full max-w-lg relative z-10 animate-bounce-in">
           <div className="bg-white/95 backdrop-blur-lg border border-white/30 rounded-3xl p-12 text-center shadow-2xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up text-green-700">
-              Doofy.
+              dooza.
             </h1>
             
             <h2 className="text-2xl font-bold text-foreground mb-4 animate-fade-up [animation-delay:100ms] opacity-0 [animation-fill-mode:forwards]">
@@ -109,7 +109,7 @@ const Signup = () => {
           {/* Main content */}
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up text-green-700">
-              Doofy.
+              dooza.
             </h1>
             
             <h2 className="text-2xl font-bold text-foreground mb-4 animate-fade-up [animation-delay:100ms] opacity-0 [animation-fill-mode:forwards]">

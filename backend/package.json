@@ -1,7 +1,7 @@
 {
-  "name": "doofy-backend",
+  "name": "dooza-backend",
   "version": "1.0.0",
-  "description": "Backend API for Doofy email collection",
+  "description": "Backend API for dooza email collection",
   "main": "server.js",
   "type": "module",
   "scripts": {

@@ -42,7 +42,7 @@ app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'healthy', 
     timestamp: new Date().toISOString(),
-    message: 'Doofy Backend API is running!'
+    message: 'dooza Backend API is running!'
   });
 });
 
@@ -172,7 +172,7 @@ app.delete('/api/emails', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`
-🚀 Doofy Backend API Server Running!
+🚀 dooza Backend API Server Running!
 📡 Port: ${PORT}
 🌐 Health Check: http://localhost:${PORT}/api/health
 📊 Admin Endpoints:

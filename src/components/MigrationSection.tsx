@@ -34,7 +34,7 @@ const MigrationSection = () => {
           }`}
           style={{ transitionDelay: '100ms' }}
         >
-          Switch to Doofy in minutes with seamless data migration
+          Switch to dooza in minutes with seamless data migration
         </p>
         
         <div 

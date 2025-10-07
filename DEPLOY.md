@@ -1,6 +1,6 @@
-# 🚀 Deploy Doofy to Vercel (Frontend + Backend)
+# 🚀 Deploy dooza to Vercel (Frontend + Backend)
 
-Your Doofy landing page is ready for deployment! Here's how to get it live with full email collection working.
+Your dooza landing page is ready for deployment! Here's how to get it live with full email collection working.
 
 ## 📋 **Quick Setup (5 minutes)**
 
@@ -96,6 +96,6 @@ As your business grows, easily upgrade to:
 
 ---
 
-**🎉 Your Doofy landing page will be production-ready and collecting emails from real users worldwide!**
+**🎉 Your dooza landing page will be production-ready and collecting emails from real users worldwide!**
 
 The system works identically online as it does locally - your admin dashboard will show all signups from any visitor, anywhere in the world.

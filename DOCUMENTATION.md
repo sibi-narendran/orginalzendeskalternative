@@ -1,8 +1,8 @@
-# 📚 Doofy Website - Complete Documentation
+# 📚 dooza Website - Complete Documentation
 
 ## 🎯 **Project Overview**
 
-**Doofy** is a modern, conversion-optimized landing page for a Zendesk/zendesk alternative customer support platform. The website showcases revolutionary AI-first pricing and includes a complete email collection system with admin analytics.
+**dooza** is a modern, conversion-optimized landing page for a Zendesk/zendesk alternative customer support platform. The website showcases revolutionary AI-first pricing and includes a complete email collection system with admin analytics.
 
 **Live Website:** [https://zendesk-alternative.vercel.app](https://zendesk-alternative.vercel.app)
 
@@ -31,14 +31,14 @@
 ### **1. Landing Page (`/`)**
 
 #### **Navigation Header**
-- **Doofy Branding** - Consistent green logo text
+- **dooza Branding** - Consistent green logo text
 - **Menu Items:** Features, Pricing
 - **CTA Buttons:** "Book a Call" (Cal.com) + "Start Free Trial" (→ signup)
 
 #### **Hero Section**  
-- **Main Message:** "Meet Doofy. A smarter, affordable zendesk alternative."
+- **Main Message:** "Meet dooza. A smarter, affordable zendesk alternative."
 - **Dual CTA:** "Get Started" (→ signup) + "Book a Call" (Cal.com demo)
-- **Brand Colors:** Green (#15803d) for Doofy text
+- **Brand Colors:** Green (#15803d) for dooza text
 
 #### **Migration Section**
 - **Heading:** "Easily migrate your data from"  
@@ -62,7 +62,7 @@
 
 #### **Final CTA Section**
 - **Hook:** "Ready to switch?"
-- **Message:** Join hundreds of businesses already using Doofy
+- **Message:** Join hundreds of businesses already using dooza
 - **Dual CTA:** "Start Free Trial" (→ signup) + "Book a Call" (Cal.com)
 
 ### **2. Pricing Page (`/pricing`)**
@@ -80,11 +80,11 @@
 - **Smooth Animations** - Custom CSS animations (slide-up, bounce-in, scale-in)
 
 #### **User Experience Flow**
-1. **Branding:** "Doofy." text in signature green
+1. **Branding:** "dooza." text in signature green
 2. **Clear Action:** "Start Free Trial" 
 3. **Simple Form:** Just email input (left-aligned)
 4. **Trust Signal:** "No credit card required"
-5. **Success State:** "Welcome to Doofy!" with email confirmation
+5. **Success State:** "Welcome to dooza!" with email confirmation
 
 #### **Technical Features**
 - **Email Validation** - Client-side validation
@@ -125,7 +125,7 @@ GET /api/health
 {
   "status": "healthy",
   "timestamp": "2025-10-06T12:00:00.000Z", 
-  "message": "Doofy Backend API is running on Vercel!"
+  "message": "dooza Backend API is running on Vercel!"
 }
 ```
 
@@ -210,14 +210,14 @@ DELETE /api/emails
 ## 🎨 **Design System**
 
 ### **Color Palette**
-- **Primary Green:** `#15803d` (text-green-700) - Doofy branding
+- **Primary Green:** `#15803d` (text-green-700) - dooza branding
 - **Accent Background:** HSL accent colors from theme
 - **Gradients:** `bg-gradient-primary`, `bg-gradient-accent`
 - **Text Hierarchy:** `text-foreground`, `text-muted-foreground`
 
 ### **Typography**
 - **Headings:** Bold, large sizing (text-4xl to text-7xl)
-- **Brand Text:** "Doofy." with period for recognition
+- **Brand Text:** "dooza." with period for recognition
 - **Responsive:** Different sizes for mobile/desktop
 
 ### **Animation System**
@@ -387,7 +387,7 @@ DELETE /api/emails
 ### **Form Optimization**
 - **Single Field:** Only email required (minimal friction)
 - **Clear Value:** Revolutionary pricing message prominent
-- **Visual Hierarchy:** Doofy branding reinforces trust
+- **Visual Hierarchy:** dooza branding reinforces trust
 - **Success Feedback:** Immediate confirmation
 
 ### **Technical SEO**
@@ -562,6 +562,6 @@ git push  # Auto-deploys to Vercel
 
 ---
 
-**🎉 Your Doofy website is a complete, professional landing page system ready to collect leads and grow your customer support alternative business!**
+**🎉 Your dooza website is a complete, professional landing page system ready to collect leads and grow your customer support alternative business!**
 
 The entire system is built for scale, optimized for conversions, and ready to compete with established players in the market. Every technical decision supports the business goal of capturing qualified leads and demonstrating your platform's revolutionary approach to customer support pricing.

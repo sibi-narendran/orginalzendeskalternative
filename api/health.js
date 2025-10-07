@@ -6,7 +6,7 @@ export default function handler(req, res) {
   res.status(200).json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
-    message: 'Doofy Backend API is running on Vercel!',
+    message: 'dooza Backend API is running on Vercel!',
     environment: 'production'
   });
 }
