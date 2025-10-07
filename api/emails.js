@@ -25,82 +25,81 @@ export default async function handler(req, res) {
       }
 
       const emailData = {
-        id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+        id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString() + Math.random().toString(36).substr(2, 9),
         email: email.toLowerCase().trim(),
         timestamp: new Date().toISOString(),
         ip_address: req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || 'unknown',
         user_agent: req.headers['user-agent'] || 'unknown'
       };
 
-      // Save email to shared storage
-      const savedEmail = await addEmail(emailData);
-      
-      console.log(`New email saved: ${emailData.email} at ${emailData.timestamp}`);
-      
-      return res.status(201).json({ 
-        success: true, 
-        message: 'Email saved successfully',
-        id: savedEmail.id,
-        email: savedEmail.email,
-        timestamp: savedEmail.timestamp
-      });
+      // Save email to Supabase database
+      try {
+        const savedEmail = await addEmail(emailData);
+        
+        console.log(`New email saved: ${emailData.email} at ${emailData.timestamp}`);
+        
+        return res.status(201).json({ 
+          success: true, 
+          message: 'Email saved successfully to database',
+          id: savedEmail.id,
+          email: savedEmail.email,
+          timestamp: savedEmail.timestamp
+        });
+      } catch (dbError) {
+        console.error('Database save failed:', dbError);
+        return res.status(500).json({ 
+          error: 'Failed to save email to database',
+          success: false,
+          details: 'Database connection issue. Please try again.'
+        });
+      }
     }
 
     if (req.method === 'GET') {
-      // Get all emails from shared storage
-      const emails = await getEmails();
-      
-      // If no emails yet, show some demo data so admin page looks good
-      if (emails.length === 0) {
-        const demoEmails = [
-          {
-            id: 'demo-3',
-            email: 'sarah.johnson@shopify.com',
-            timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
-            ip_address: '192.168.1.45',
-            user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
-          },
-          {
-            id: 'demo-2', 
-            email: 'mike.chen@bigcommerce.com',
-            timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
-            ip_address: '10.0.0.123',
-            user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-          },
-          {
-            id: 'demo-1',
-            email: 'alex.rodriguez@woocommerce.com', 
-            timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
-            ip_address: '172.16.0.67',
-            user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0)'
-          }
-        ];
+      // Get all emails from Supabase database
+      try {
+        const emails = await getEmails();
+        
+        // Check if we got demo data (fallback when DB is not configured)
+        const isDemo = emails.some(email => email.id.startsWith('demo-'));
         
         return res.json({ 
           success: true, 
-          emails: demoEmails,
-          total: demoEmails.length,
-          message: 'Showing demo data. Submit an email to see real submissions appear!'
+          emails: emails,
+          total: emails.length,
+          message: isDemo 
+            ? 'Showing demo data. Configure Supabase to see real submissions!' 
+            : `${emails.length} real email submissions collected from database!`,
+          database_status: isDemo ? 'demo_mode' : 'connected'
+        });
+      } catch (dbError) {
+        console.error('Database fetch failed:', dbError);
+        return res.status(500).json({ 
+          error: 'Failed to fetch emails from database',
+          success: false,
+          details: 'Database connection issue. Please check Supabase configuration.'
         });
       }
-      
-      return res.json({ 
-        success: true, 
-        emails: emails,
-        total: emails.length,
-        message: `${emails.length} real email submissions collected!`
-      });
     }
 
     if (req.method === 'DELETE') {
-      // Clear all emails from shared storage
-      const deletedCount = await clearEmails();
-      
-      return res.json({ 
-        success: true, 
-        message: `Deleted ${deletedCount} email records`,
-        deletedCount
-      });
+      // Clear all emails from Supabase database
+      try {
+        const deletedCount = await clearEmails();
+        
+        return res.json({ 
+          success: true, 
+          message: `Deleted ${deletedCount} email records from database`,
+          deletedCount
+        });
+      } catch (dbError) {
+        console.error('Database clear failed:', dbError);
+        return res.status(500).json({ 
+          error: 'Failed to clear emails from database',
+          success: false,
+          details: 'Database connection issue. Please check Supabase configuration.'
+        });
+      }
     }
 
     return res.status(405).json({ error: 'Method not allowed' });
